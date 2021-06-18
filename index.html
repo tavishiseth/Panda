@@ -3,9 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Hello</title>
+    <!-- CSS Styles -->
+<style>
+  .speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
+  .speech input {border: 0; width: 240px; display: inline-block; height: 30px;}
+  .speech img {float: right; width: 30px }
+</style>
+
+<!-- Search Form -->
+<form id="labnol" method="get" action="https://www.google.com/search">
+  <div class="speech">
+    <input type="text" name="q" id="transcript" placeholder="Speak" />
+    <img onclick="startDictation()" src="https://cdn2.vectorstock.com/i/thumb-large/84/51/colorful-microphone-icon-vector-6358451.jpg" />
+  </div>
+</form>
+
+<!-- HTML5 Speech Recognition API -->
+<script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('transcript').value
+                                 = e.results[0][0].transcript;
+        recognition.stop();
+        document.getElementById('labnol').submit();
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+</script>
+    <style media="screen">
+      body {
+        background-color: #39A6A3;
+      }
+    </style>
   </head>
   <body>
-    <hr>
+    <center>
     <h1>Hello everyone!</h1>
     <h2>I am <a href="https://www.instagram.com/bearpandaofficial/">Tavishi</a></h2>
   <form class="" action="mailto:tavishii18@gmail.com" method="post" enctype="text/plain">
@@ -13,13 +61,13 @@
       <input type="text" name="Name">
       <br><br>
       <label>Secret message</label>
-      <input type="password" name="Secret Message">
+      <input type="password" name="Secret Message"><br><br>
       <input type="submit"><br>
     </form>
     <hr>
     <table cellspacing="20">
       <tr>
-         <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwnoYEOkqDL11__RI6t0HgantY0l6q3GTS6A&usqp=CAU" height="200px" width="200px "alt=""><td>
+         <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwnoYEOkqDL11__RI6t0HgantY0l6q3GTS6A&usqp=CAU" width=100% "alt=""><td>
          <td>I am a 2nd year student<td>
       </tr>
     <table>
@@ -67,5 +115,6 @@
     </tr>
       </table>
       </h4>
+    </center>
   </body>
 </html>
