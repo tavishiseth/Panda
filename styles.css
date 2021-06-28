@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 50px auto 0 auto;
+  font-size: 300%;
+  //100%,1 em is 16px
+  margin-top: 0;
+}
+
+a:link {
+  color: pink;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: yellow;
+}
+
+body {
+  margin: 0;
+  font-family: 'Handlee', cursive;
+  text-align: center;
+  background-color: #053742;
+  color: pink;
+}
+
+hr {
+  background-color: #39A6A3;
+  border-style: dotted none none;
+  border-color: grey;
+  border-width: 5px;
+  width: 10%;
+}
+
+h1:hover {
+  background-color: gold;
+}
+h2:hover {
+  background-color: silver;
+}
+h1
+{
+  color: white;
+}
+
+/* CLASS SELECTOR- CAN BE USED MULTIPLE TIMES, even in the same tag */
+.apple {
+  background-color: white;
+}
+.orange {
+  border-color: #39A6A3;
+}
+/* ID SELECTOR- CAN BE USED ONLY ONCE */
+#heading {
+  color: white;
+}
+
+div {
+  background-color: green;
+  width: 100px;
+}
+
+.guava {
+  background-color: brown;
+  width: 200px;
+  //display:none or inline or block or inline-block;
+  //visibility: hidden;
+}
+
+.cs {
+  background-color: black;
+}
+
+.green {
+  height: 50px;
+  width: 50px;
+  background-color: green;
+  position: relative;
+  display: inline-block;
+  left:100px;
+}
+
+.gold {
+  height: 50px;
+  width: 50px;
+  background-color: gold;
+  position: relative;
+  display: inline-block;
+  right:50px;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-color: grey;
+}
+.silver {
+  height: 50px;
+  width: 50px;
+  background-color: silver;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.purple {
+  height: 50px;
+  width: 50px;
+  background-color: purple;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.tavishi {
+  position: fixed;
+  padding: 50px;
+  color: pink;
+  right: 5px;
+}
+
+.grapes {
+  margin: 0 auto 0 auto;
+}
+
+.bananana {
+  background-color: #364547;
+  line-height: 2;
+  width: 40%;
+  margin: auto;
+}
+
+.photo {
+  width: 300px;
+  float: right;
+  margin-left: 0px;
+  padding: 50px;
+}
